@@ -1,0 +1,47 @@
+CHREDUX IA - copia completa del código de la landing
+=====================================================
+
+Qué contiene esta carpeta
+------------------------
+Todo el código del sitio, sin nada de relleno:
+
+- src/routes/index.tsx      -> página principal (portada, tres productos,
+                               comparativa, beneficios, formulario de agendamiento,
+                               botón flotante de WhatsApp, animación de pulso)
+- src/routes/privacidad.tsx -> página de Política de Privacidad
+- src/routes/__root.tsx     -> encabezado común, tipografías y datos para
+                               buscadores (título, descripción, redes)
+- src/lib/leads.functions.ts-> guardado de los contactos: valida los 4 campos,
+                               los escribe en tu planilla de Google Sheets y
+                               crea el evento en Google Calendar
+- src/styles.css            -> colores (azul noche + ámbar), animaciones
+- src/assets/               -> imagen de la marca CHREDUX IA
+- public/                   -> ícono de la pestaña (favicon) y robots.txt
+- src/components/ui/        -> piezas de interfaz reutilizables
+- package.json, bun.lock    -> lista de librerías y versiones exactas
+
+Cómo abrirlo y verlo funcionando
+--------------------------------
+Necesitas Node.js (https://nodejs.org). Luego, desde esta carpeta:
+
+  npm install
+  npm run dev
+
+Se abre en http://localhost:8080
+
+Para generar la versión final lista para publicar:
+
+  npm run build
+
+Importante sobre las conexiones
+-------------------------------
+La escritura en Google Sheets y la creación del evento en Google Calendar
+usan las conexiones que Lovable guarda de forma segura en el servidor; esas
+claves NO viajan en esta copia. Si abres el código fuera de Lovable, la parte
+de Google (planilla y calendario) queda inactiva hasta que conectes tus propias
+credenciales. El formulario, las validaciones y toda la página funcionan igual.
+
+Dominio
+-------
+Este código es el sitio; el nombre chreduxia.cl se configura aparte, en los
+ajustes de dominio de Lovable y en el panel de DNS de V2 Networks.
