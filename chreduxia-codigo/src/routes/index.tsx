@@ -1,3 +1,4 @@
+import brandAsset from "@/assets/chredux-brand-octubre.png";
 import { createFileRoute } from "@tanstack/react-router";
 import {
   BellRing,
@@ -17,7 +18,6 @@ import {
 import { useEffect, useRef, useState } from "react";
 import { registrarReserva, SERVICIOS } from "@/lib/leads.functions";
 import brandAsset from "@/assets/chredux-brand-octubre.png";
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
